@@ -18,6 +18,12 @@
      
     <div>
       <h2>Please enter your data below!<h2>
+      <p>
+        <form>
+          <label for="input-data">Data to be encrypted: </label>
+          <input type="text" id="input-data" name="input-data">
+        </form>
+      </p>
     </div>
     
   </body>

@@ -17,9 +17,9 @@
       </p>
     </div>
      
-     <div>
+    <div>
       <h2>Please enter your data below!<h2>
-     </div>
+    </div>
     
   </body>
 </html>

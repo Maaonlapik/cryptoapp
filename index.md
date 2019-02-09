@@ -4,9 +4,7 @@
   </head>
   <body>
   
-    <div>
-      <h1>Welcome to the start of this webpage!</h1><br>
-      
+    <div>      
       <p>
       This application is capable of encrypting/decrypting the provided data with: <br>
         - OTP <br>

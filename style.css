@@ -1,12 +1,12 @@
 body {
-  background-image: 
   height: 100%;
+  background-image: 
   url("https://www.facebook.com/photo.php?fbid=10203797445736684&l=3cefac6f2f");
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
   overflow: auto;
-  font-family: "Verdana", Verdana, monospace;
+  font-family: "Verdana", monospace;
 }
 
 header {

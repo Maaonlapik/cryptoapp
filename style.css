@@ -1,5 +1,4 @@
 body {
-  height: 100%;
   background-image: 
   url("loodus.jpg");
   background-repeat: no-repeat;
@@ -12,8 +11,6 @@ body {
 header {
   text-align:  center;
   font-family: fantasy;
-  font-size: 20px;
-  color: 
 }
 
 #intro {

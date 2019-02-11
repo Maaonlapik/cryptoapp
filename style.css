@@ -1,0 +1,21 @@
+body {
+  background-image: 
+  url("https://www.facebook.com/photo.php?fbid=10203797445736684&l=3cefac6f2f");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  overflow: auto;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+header {
+  text-align:  center;
+  font-family: fantasy;
+  font-size: 20px;
+  color: 
+}
+
+#intro {
+  align-items: center;
+}

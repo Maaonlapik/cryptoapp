@@ -1,4 +1,55 @@
+function OTP(state, input, key) {
+  var inputLength = input.length;
+  var keyLength = key.length;
+  var alphabet = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+  var output = "";
+  for (var i = 0; i < inputLength; i++) {
+    var keyIndex = alphabet.indexOf(key.charAt(i));
+    var inputIndex = alphabet.indexOf(input.charAt(i));
+    if (state == "otpEncode" && inputIndex + keyIndex > alphabet.length) {
+      var index = (inputIndex + keyIndex) - alphabet;
+      output += alphabet.charAt(index);
+    } else if (state == "otpDecode" && inputIndex - keyIndex < 0) {
+      var index = alphabet + (inputIndex - keyIndex);
+      output += alphabet.charAt(index);
+    } else if (state == "otpEncode") {
+      output += alphabet.charAt(inputIndex + keyIndex);
+    } else {
+      output += alphabet.charAt(inputIndex - keyIndex);
+    }
+  }
+  return output;
+}
 
+function selectEncryption(doThing) {
+  var input = String(document.getElementById("input").value);
+  var key = String(document.getElementById("key").value);
+  var output;
+    switch (doThing) {
+      case "optEncode":
+      output = OTP("otpEncode", input, key);
+      break;
+      case "otpDecode":
+      output = OTP("otpDecode", input, key);
+      break;
+      case "SHA512":
+      var sha512 = SHA512(input);
+      output = btoa(sha512);
+      break;
+      case "md5Dec":
+      output = md5Decrypt(input);
+      break;
+      default:
+      output = "";
+    }
+    if (input.length == 0) {
+      document.getElementById("output").innerHTML = "Enter a message!";
+    } else if (key.length == 0 && encdec == 'otpEncode' || key.length == 0 && encdec == 'otpDecode') {
+      document.getElementById("output").innerHTML = "Enter a key!";
+    } else {
+      document.getElementById("output").innerHTML = output;
+    }
+}
 
 /*
 * Secure Hash Algorithm (SHA512)

@@ -36,9 +36,6 @@ function selectEncryption(doThing) {
       var sha512 = SHA512(input);
       output = btoa(sha512);
       break;
-      case "md5Dec":
-      output = md5Decrypt(input);
-      break;
       default:
       output = "";
     }

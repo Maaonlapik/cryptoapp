@@ -49,6 +49,7 @@ function selectEncryption(doThing) {
     } else {
       document.getElementById("output").innerHTML = output;
     }
+  return output;
 }
 
 /*
